@@ -10,7 +10,7 @@ var productRoutes	= require("./routes/Products");
 var settingRoutes	= require("./routes/Settings");
 var customerRoutes	= require("./routes/Customers");
 
-mongose.connect('mongodb://172.20.112.1:27017/testdb');
+mongose.connect('mongodb://host.docker.internal:27017/testdb');
 
 app.use(express.json());
 
