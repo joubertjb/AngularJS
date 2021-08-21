@@ -1,6 +1,6 @@
 ## Comando obrigatório
 ## Baixa a imagem do node com versão alpine (versão mais simplificada e leve)
-FROM node:alpine
+FROM debian:alpine
 
 ## Define o local onde o app vai ficar no disco do container
 ## Pode ser o diretório que você quiser
@@ -10,7 +10,7 @@ WORKDIR /usr/app
 COPY package*.json ./
 
 ## Executa npm install para adicionar as dependências e criar a pasta node_modules
-RUN npm install
+RUN yarn
 
 ## Copia tudo que está no diretório onde o arquivo Dockerfile está 
 ## para dentro da pasta /usr/app do container
@@ -22,4 +22,4 @@ EXPOSE 3000
 
 ## Não se repete no Dockerfile
 ## Executa o comando npm start para iniciar o script que que está no package.json
-CMD npm start
+CMD yarn run start
