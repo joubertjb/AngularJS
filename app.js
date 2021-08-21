@@ -10,7 +10,7 @@ var productRoutes	= require("./routes/Products");
 var settingRoutes	= require("./routes/Settings");
 var customerRoutes	= require("./routes/Customers");
 
-mongose.connect('mongodb://localhost:27017/testdb');
+mongose.connect('mongodb://192.168.3.2:27017/testdb');
 
 app.use(express.json());
 
